@@ -3,8 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Praneeth | Portfolio</title>
-    <meta name="description" content="Praneeth's developer portfolio" />
+  <title>Praneeth | Portfolio</title>
+  <meta name="description" content="Praneeth's developer portfolio – AI & ML, applications, projects." />
+  <meta name="theme-color" content="#0f0f11" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Praneeth | Portfolio" />
+  <meta property="og:description" content="AI & ML Engineering UnderGrad – building clean, purposeful software." />
+  <meta property="og:url" content="https://praneeeethcodes.github.io" />
+  <meta property="og:image" content="https://praneeeethcodes.github.io/og-preview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -12,31 +19,51 @@
   </head>
   <body>
     <header class="site-header">
-      <div class="container">
-        <h1 class="hero-title">Hi, I'm <span class="accent">Praneeth Jairam</span> </h1>
-        <p class="subtitle">AI & ML Engineering UnderGrad - Application Developer </p>
-        <nav class="socials">
-          <a aria-label="GitHub" href="https://github.com/praneeeethcodes" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a aria-label="LinkedIn" href="https://www.linkedin.com/in/praneeth-jairam-79130b31a" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a aria-label="Email" href="mailto:saipraneethjairam@gmail.com">Email</a>
-        </nav>
+      <div class="container header-inner">
+        <div class="brand-block">
+          <h1 class="hero-title">Praneeth<br><span class="hero-sub">AI & ML Engineering</span></h1>
+        </div>
+        <div class="header-actions">
+          <nav class="socials subtle-links" aria-label="Primary social links">
+            <a aria-label="GitHub" href="https://github.com/praneeeethcodes" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a aria-label="LinkedIn" href="https://www.linkedin.com/in/praneeth-jairam-79130b31a" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a aria-label="Email" href="mailto:saipraneethjairam@gmail.com">Email</a>
+          </nav>
+          <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+        </div>
+      </div>
+      <div class="container intro-blurb">
+        <p class="lede">I build clean, minimal software products focused on clarity, performance and calm UI. Exploring applied machine learning and thoughtful interfaces. Always shipping.</p>
       </div>
     </header>
 
     <main>
-      <section id="projects" class="projects-section container">
-        <h2 class="section-title">Projects</h2>
-        <div class="projects-grid" id="projectsGrid"></div>
+      <section id="about" class="about-section container fade-seq">
+        <h2 class="section-title">About</h2>
+        <div class="about-grid">
+          <p class="about-text">I'm an undergrad focused on <strong>AI & ML engineering</strong>, rapid prototyping and developer experience. I like trimming interfaces to their essence—less ornamental noise, more signal. Current interests: model distillation, minimal backend surfaces, and edge inference.</p>
+          <ul class="quick-facts">
+            <li>Location: <span>IN / Remote</span></li>
+            <li>Focus: <span>ML Apps, Tooling</span></li>
+            <li>Stack: <span>Python · JS · PyTorch</span></li>
+            <li>Learning: <span>Systems for ML</span></li>
+          </ul>
+        </div>
       </section>
 
-      <section id="skills" class="skills-section container">
-        <h2 class="section-title">Skills</h2>
+      <section id="projects" class="projects-section container fade-seq">
+        <h2 class="section-title">Selected Work</h2>
+        <div class="projects-grid" id="projectsGrid" aria-live="polite"></div>
+      </section>
+
+      <section id="skills" class="skills-section container fade-seq">
+        <h2 class="section-title">Stack</h2>
         <ul class="chip-list" id="skillsList"></ul>
       </section>
 
-      <section id="contact" class="contact-section container">
+      <section id="contact" class="contact-section container fade-seq">
         <h2 class="section-title">Contact</h2>
-  <p>Have an opportunity or just want to say hi? <a href="mailto:saipraneethjairam@gmail.com" class="accent">Reach out</a>.</p>
+        <p class="contact-line">Have an opportunity or just want to say hi? <a href="mailto:saipraneethjairam@gmail.com" class="accent">Reach out</a>.</p>
       </section>
     </main>
 

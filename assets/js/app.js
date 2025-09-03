@@ -51,36 +51,20 @@ function updateYear() {
   y.textContent = `© ${new Date().getFullYear()} Praneeth. Built with ❤️.`; 
 }
 
-function applyIntersection() {
+function init() {
+  renderProjects();
+  renderSkills();
+  updateYear();
+  // Basic entrance animation
   const observer = new IntersectionObserver(entries => {
     entries.forEach(e => {
-      if (e.isIntersecting) {
+      if(e.isIntersecting) {
         e.target.classList.add('in-view');
         observer.unobserve(e.target);
       }
     });
   }, { threshold: 0.15 });
   document.querySelectorAll('.project-card').forEach(el => observer.observe(el));
-}
-
-function setupThemeToggle() {
-  const btn = document.getElementById('themeToggle');
-  if(!btn) return;
-  const stored = localStorage.getItem('pref-theme');
-  if(stored === 'light') document.body.classList.add('light');
-  btn.addEventListener('click', () => {
-    document.body.classList.toggle('light');
-    localStorage.setItem('pref-theme', document.body.classList.contains('light') ? 'light' : 'dark');
-  });
-}
-
-function init() {
-  renderProjects();
-  renderSkills();
-  updateYear();
-  setupThemeToggle();
-  // Delay intersection observer until DOM update flush
-  requestAnimationFrame(() => applyIntersection());
 }
 
 document.addEventListener('DOMContentLoaded', init);

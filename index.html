@@ -1,78 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Praneeth | Portfolio</title>
-  <meta name="description" content="Praneeth's developer portfolio – AI & ML, applications, projects." />
-  <meta name="theme-color" content="#0f0f11" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Praneeth | Portfolio" />
-  <meta property="og:description" content="AI & ML Engineering UnderGrad – building clean, purposeful software." />
-  <meta property="og:url" content="https://praneeeethcodes.github.io" />
-  <meta property="og:image" content="https://praneeeethcodes.github.io/og-preview.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container header-inner">
-        <div class="brand-block">
-          <h1 class="hero-title">Praneeth<br><span class="hero-sub">AI & ML Engineering</span></h1>
-        </div>
-        <div class="header-actions">
-          <nav class="socials subtle-links" aria-label="Primary social links">
-            <a aria-label="GitHub" href="https://github.com/praneeeethcodes" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a aria-label="LinkedIn" href="https://www.linkedin.com/in/praneeth-jairam-79130b31a" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a aria-label="Email" href="mailto:saipraneethjairam@gmail.com">Email</a>
-          </nav>
-          <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
-        </div>
-      </div>
-      <div class="container intro-blurb">
-        <p class="lede">I build clean, minimal software products focused on clarity, performance and calm UI. Exploring applied machine learning and thoughtful interfaces. Always shipping.</p>
-      </div>
-    </header>
-
-    <main>
-      <section id="about" class="about-section container fade-seq">
-        <h2 class="section-title">About</h2>
-        <div class="about-grid">
-          <p class="about-text">I'm an undergrad focused on <strong>AI & ML engineering</strong>, rapid prototyping and developer experience. I like trimming interfaces to their essence—less ornamental noise, more signal. Current interests: model distillation, minimal backend surfaces, and edge inference.</p>
-          <ul class="quick-facts">
-            <li>Location: <span>IN / Remote</span></li>
-            <li>Focus: <span>ML Apps, Tooling</span></li>
-            <li>Stack: <span>Python · JS · PyTorch</span></li>
-            <li>Learning: <span>Systems for ML</span></li>
-          </ul>
-        </div>
-      </section>
-
-      <section id="projects" class="projects-section container fade-seq">
-        <h2 class="section-title">Selected Work</h2>
-        <div class="projects-grid" id="projectsGrid" aria-live="polite"></div>
-      </section>
-
-      <section id="skills" class="skills-section container fade-seq">
-        <h2 class="section-title">Stack</h2>
-        <ul class="chip-list" id="skillsList"></ul>
-      </section>
-
-      <section id="contact" class="contact-section container fade-seq">
-        <h2 class="section-title">Contact</h2>
-        <p class="contact-line">Have an opportunity or just want to say hi? <a href="mailto:saipraneethjairam@gmail.com" class="accent">Reach out</a>.</p>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <small id="footerYear"></small>
-      </div>
-    </footer>
-
-    <script src="assets/js/app.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Praneeth Jairam</title>
+  <meta name="description" content="Link hub for Praneeth Jairam - AI & ML Engineering UnderGrad" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="hub">
+  <button class="mode-toggle" id="modeToggle" aria-label="Toggle dark / light">◐</button>
+  <main class="hub-wrapper">
+    <h1 class="hub-name" aria-label="Hey I am Praneeth Jairam">
+      <span class="glow-word">Hey</span>
+      <span class="glow-word delay1">I</span>
+      <span class="glow-word delay2">am</span>
+  <span class="glow-word delay3 full-name">Praneeth&nbsp;Jairam</span>
+    </h1>
+    <p class="hub-tagline">AI & ML Engineering UnderGrad - React Native Full Stack Application Developer </p>
+    <div class="hub-links" role="navigation" aria-label="Primary social links">
+      <a class="hub-chip" href="https://github.com/praneeeethcodes" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a class="hub-chip" href="https://www.linkedin.com/in/praneeth-jairam-79130b31a" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a class="hub-chip" href="mailto:saipraneethjairam@gmail.com">Email</a>
+    </div>
+    <footer class="hub-footer">© <span id="year"></span> Praneeth</footer>
+  </main>
+  <script>
+    const root = document.documentElement;
+    const toggleBtn = document.getElementById('modeToggle');
+    const stored = localStorage.getItem('theme');
+    if(stored === 'light') document.body.classList.add('light');
+    toggleBtn.addEventListener('click', ()=>{
+      document.body.classList.toggle('light');
+      localStorage.setItem('theme', document.body.classList.contains('light')? 'light':'dark');
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>

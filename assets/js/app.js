@@ -3,20 +3,20 @@ const projects = [
   {
     title: 'AI Chatbot',
     description: 'Conversational AI bot built with NLP and transformers.',
-    code: 'https://github.com/yourusername/ai-chatbot',
-    demo: 'https://yourusername.github.io/ai-chatbot/'
+  code: 'https://github.com/praneeeethcodes/ai-chatbot',
+  demo: 'https://praneeeethcodes.github.io/ai-chatbot/'
   },
   {
     title: 'Portfolio Website',
     description: 'Personal portfolio hosted on GitHub Pages with semantic HTML & CSS.',
-    code: 'https://github.com/yourusername/portfolio',
-    demo: 'https://yourusername.github.io/portfolio/'
+  code: 'https://github.com/praneeeethcodes/portfolio',
+  demo: 'https://praneeeethcodes.github.io/portfolio/'
   },
   {
     title: 'Data Viz Dashboard',
     description: 'Interactive dashboard with charts & REST API backend.',
-    code: 'https://github.com/yourusername/data-viz-dashboard',
-    demo: 'https://yourusername.github.io/data-viz-dashboard/'
+  code: 'https://github.com/praneeeethcodes/data-viz-dashboard',
+  demo: 'https://praneeeethcodes.github.io/data-viz-dashboard/'
   }
 ];
 
